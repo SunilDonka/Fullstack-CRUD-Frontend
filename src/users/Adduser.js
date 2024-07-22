@@ -19,7 +19,7 @@ export default function Adduser() {
 
     const onSubmit= async (e)=>{
         e.preventDefault();
-        await axios.post("http://fullstack-javaspringboot-env.eba-bbmfskxq.us-east-2.elasticbeanstalk.com/user",user)
+        await axios.post("http://localhost:8080/user",user)
         navigate("/")
     };
 
