@@ -27,12 +27,12 @@ export default function Edituser() {
 
     const onSubmit= async (e)=>{
         e.preventDefault();
-        await axios.put(`http://fullstack-javaspringboot-env.eba-bbmfskxq.us-east-2.elasticbeanstalk.com/user/${id}`,user)
+        await axios.put(`http://localhost:8080/user/${id}`,user)
         navigate("/")
     };
 
     const loadUser = async()=>{
-        const result = await axios.get(`http://fullstack-javaspringboot-env.eba-bbmfskxq.us-east-2.elasticbeanstalk.com/user/${id}`)
+        const result = await axios.get(`http://localhost:8080/user/${id}`)
         setUser(result.data)
     }
 
