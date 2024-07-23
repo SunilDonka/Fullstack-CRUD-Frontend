@@ -14,7 +14,7 @@ export default function Home() {
   },[]);
 
    const loadUsers=async()=>{
-    const result=await axios.get("http://fullstack-javaspringboot-env.eba-bbmfskxq.us-east-2.elasticbeanstalk.com/users");
+    const result=await axios.get("http://localhost:8080/users");
     setUsers(result.data);
    };
 
